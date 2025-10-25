@@ -63,8 +63,8 @@ jobs:
           #- sub_level: "93"
           #  os_patch_level: "2024-09"
           - sub_level: "99"
-            os_patch_level: "2024-10"
-            # os_patch_level: "2025-10"
+            # os_patch_level: "2024-10"
+            os_patch_level: "2025-09"
 
           #- sub_level: "112"
           #  os_patch_level: "2024-11"
