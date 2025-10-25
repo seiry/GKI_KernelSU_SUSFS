@@ -769,7 +769,7 @@ jobs:
             *AnyKernel3.zip
             *.img
 
-  my-build-kernel-kernelsu-susfs:
+  my-build-kernel-kernelsu-susfs-2024-10r15:
     runs-on: ubuntu-latest
     env:
       CCACHE_COMPILERCHECK: "%compiler% -dumpmachine; %compiler% -dumpversion"
@@ -906,6 +906,9 @@ jobs:
           # Sync repo and apply patches
           $REPO --version
           $REPO --trace sync -c -j$(nproc --all) --no-tags --fail-fast
+          cd kernel/common
+          git fetch --tags
+          git checkout -b android14-6.1-2024-10_r15 refs/tags/android14-6.1-2024-10_r15
           echo "REMOTE_BRANCH=$REMOTE_BRANCH" >> $GITHUB_ENV
 
           FORMATTED_BRANCH="${{ inputs.android_version }}-${{ inputs.kernel_version }}"
