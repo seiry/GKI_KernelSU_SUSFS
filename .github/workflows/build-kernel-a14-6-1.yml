@@ -30,6 +30,7 @@ on:
         description: '自定义版本名(如6.1.93后面的字符/留空则使用默认版本号)'
         required: false
         type: string
+        default: 'xijinping-love-you'
       use_zram:
         description: '是否开启增加更多ZRAM算法?'
         required: true
