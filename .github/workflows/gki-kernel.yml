@@ -909,6 +909,8 @@ jobs:
           cd kernel/common
           git fetch --tags
           git checkout -b android14-6.1-2024-10_r15 refs/tags/android14-6.1-2024-10_r15
+          cd ..
+          cd ..
           echo "REMOTE_BRANCH=$REMOTE_BRANCH" >> $GITHUB_ENV
 
           FORMATTED_BRANCH="${{ inputs.android_version }}-${{ inputs.kernel_version }}"
