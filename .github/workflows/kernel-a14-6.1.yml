@@ -40,6 +40,7 @@ on:
 
 jobs:
   build-kernel-a14-6-1-kernelsu-susfs:
+    name: Build KernelSU/SUSFS for Android 14 6.1 (KSU variant:${{inputs.kernelsu_variant}}, ZRAM:${{ inputs.use_zram }}, KPM:${{ inputs.use_kpm }}, BBG:${{ inputs.BBG }})
     strategy:
       fail-fast: false
       matrix:
