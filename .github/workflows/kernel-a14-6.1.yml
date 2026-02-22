@@ -36,7 +36,7 @@ on:
         description: '是否启用内核层面阻止对关键分区/设备节点的非法写入(LSM)？'
         required: true
         type: boolean
-        default: false
+        default: true
 
 jobs:
   build-kernel-a14-6-1-kernelsu-susfs:
@@ -79,9 +79,8 @@ jobs:
           #  os_patch_level: "2025-03"
           #- sub_level: "129"
           #  os_patch_level: "2025-04"
-          # evolution-x 11.5.3 qpr1
-          - sub_level: "134"
-            os_patch_level: "2025-05"
+          #- sub_level: "134"
+          #  os_patch_level: "2025-05"
           - sub_level: "145"
             os_patch_level: "2025-09"
           # - sub_level: "X"
